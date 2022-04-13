@@ -1,0 +1,28 @@
+{
+    "name": "oledsonarv3",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.8",
+        "pxt-sonar": "github:Microsoft/pxt-sonar#v0.0.5",
+        "SSD1306_OLED": "github:tinkertanker/pxt-oled-ssd1306#v2.0.13"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "4.0.18",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
