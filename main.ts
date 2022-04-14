@@ -1,25 +1,32 @@
 let barnbr = 0
+basic.showLeds(`
+    # . . . #
+    . . . . .
+    . . # . .
+    . . . . .
+    # . . . #
+    `)
 OLED.init(128, 64)
-OLED12864_I2C.init(120)
+OLED12864_I2C.init(60)
 while (barnbr < 100) {
     OLED.drawLoading(barnbr)
     barnbr += 1
 }
-OLED.init(128, 64)
-OLED.newLine()
-OLED.newLine()
+OLED12864_I2C.clear()
+OLED.clear()
 basic.forever(function () {
     while (input.buttonIsPressed(Button.A)) {
+        OLED12864_I2C.zoom(true)
         OLED12864_I2C.showNumber(
-        58,
-        28,
+        6,
+        1,
         sonar.ping(
         DigitalPin.P15,
         DigitalPin.P14,
         PingUnit.Centimeters
         ),
-        2
+        1
         )
     }
-    OLED.clear()
+    OLED12864_I2C.clear()
 })
